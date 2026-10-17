@@ -56,12 +56,13 @@ npm run validate          # format:check && lint && typecheck && test
 
 ## Helpers
 
-| Helper                     | Role                                                      |
-| -------------------------- | --------------------------------------------------------- |
-| `helpers/cli-runner.ts`    | In-process `runCli` with stdout/stderr capture            |
-| `helpers/mock-open-url.ts` | Suite-wide `openUrl` mock (vitest `setupFiles`)           |
-| `helpers/assertions.ts`    | `expectCliSuccess` / `expectCliFailure` / output matchers |
-| `helpers/fixtures.ts`      | Temp config / client.json factories                       |
+| Helper                     | Role                                                                       |
+| -------------------------- | -------------------------------------------------------------------------- |
+| `helpers/cli-runner.ts`    | In-process `runCli` with stdout/stderr capture                             |
+| `helpers/mock-open-url.ts` | Suite-wide `openUrl` mock (vitest `setupFiles`)                            |
+| `helpers/storage-setup.ts` | Suite-wide OAuth state isolation in temp dir (vitest `setupFiles`) (#2719) |
+| `helpers/assertions.ts`    | `expectCliSuccess` / `expectCliFailure` / output matchers                  |
+| `helpers/fixtures.ts`      | Temp config / client.json factories                                        |
 
 OAuth interactive tests stub or drive the loopback callback in-process rather
 than requiring a real browser.

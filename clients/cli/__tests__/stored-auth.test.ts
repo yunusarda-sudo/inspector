@@ -547,7 +547,7 @@ describe("--use-stored-auth", () => {
         "--method",
         "tools/list",
       ],
-      { env: { MCP_STORAGE_DIR: dir } },
+      { env: { MCP_STORAGE_DIR: dir, MCP_INSPECTOR_OAUTH_STATE_PATH: "" } },
     );
     expectCliSuccess(result);
     const last = server.getRecordedRequests().at(-1)!;
